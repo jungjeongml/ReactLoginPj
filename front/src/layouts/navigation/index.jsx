@@ -14,14 +14,6 @@ export const Navigation = memo(({category, isLogin})=>{
     </li>
   )
 
-  console.log(category.filter((item)=>{
-    return !item.hasOwnProperty('isLogin') || item.isLogin === isLogin
-  }).map((item)=>{
-    <li key={item.path}>
-      <NavLink to={item.path}>{item.name}</NavLink>
-    </li>
-  }))
-
   return <ul>{category.filter(categoryFilter).map(categoryMap)}</ul>
 })
 
