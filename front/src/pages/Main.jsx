@@ -1,7 +1,5 @@
-export const Main = ()=>{
-  return (
-    <>
-    12312312
-    </>
-  )
-}
+
+export const Main = () => {
+  return <>Hello Main page</>;
+};
+

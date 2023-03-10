@@ -1,26 +1,28 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import { Header } from './layouts/header';
-import { StoreProvider } from './store';
-import { Login } from './pages/user';
-import { Main } from './pages/Main';
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Header } from "./layouts/header";
+import { StoreProvider } from "./store";
+import { Login, Logout, Main } from "./pages";
 
 
 const App = () => {
   return (
     <StoreProvider>
-    <BrowserRouter>
-      <Routes> 
-        <Route path='*' element={<Header />} />
-      </Routes>
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='login' element={<Login />} />
-        {/* <Route path='logout' element={<Logout />} /> */}
-        {/* <Route path='profile' element={<Logout />} /> */}
-      </Routes>
-    </BrowserRouter>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Header />} />
+        </Routes>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="login" element={<Login />} />
+          <Route path="logout" element={<Logout />} />
+          {/* <Route path='profile' element={<Logout />} /> */}
+        </Routes>
+      </BrowserRouter>
+
     </StoreProvider>
   );
-}
+};
 
 export default App;

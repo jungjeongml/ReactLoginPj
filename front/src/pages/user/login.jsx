@@ -1,3 +1,4 @@
+
 import { useStore } from "../../store"
 import { useNavigate } from "react-router-dom"
 import  axios  from 'axios'
@@ -25,21 +26,20 @@ export const Login = () => {
     dispatch({type:'LOGIN', payload: !state.isLogin})
   }
 
+
   return (
     <>
       <form onSubmit={submitHandler}>
-      <div>
-        email입력
-      </div>
-      <div>
-        <input type='text' name="userid" ></input>
-      </div>
-      <div>
-        password입력
-      </div>
-      <input type='password' name="userpw" ></input>
-      <button onClick={handleClick}>로그인</button>
+
+        <div>email입력</div>
+        <div>
+          <input type="text" name="userid"></input>
+        </div>
+        <div>password입력</div>
+        <input type="password" name="userpw"></input>
+        <button onClick={handleClick}>로그인</button>
+
       </form>
     </>
-  )
-}
+  );
+};
