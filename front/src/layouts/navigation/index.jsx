@@ -11,10 +11,12 @@ export const Navigation = memo(({ category, isLogin }) => {
     <li key={item.path}>
       <NavLink to={item.path}>{item.name}</NavLink>
     </li>
-  );
 
-  return <ul>{category.filter(categoryFilter).map(categoryMap)}</ul>;
-});
+  )
+
+  return <ul>{category.filter(categoryFilter).map(categoryMap)}</ul>
+})
+
 
 // const category = [
 //   {path:'/', name:'Main'},

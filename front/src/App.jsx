@@ -1,11 +1,14 @@
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header } from "./layouts/header";
 import { StoreProvider } from "./store";
 import { Login, Logout, Main } from "./pages";
 
+
 const App = () => {
   return (
     <StoreProvider>
+
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Header />} />
@@ -17,6 +20,7 @@ const App = () => {
           {/* <Route path='profile' element={<Logout />} /> */}
         </Routes>
       </BrowserRouter>
+
     </StoreProvider>
   );
 };
