@@ -20,7 +20,7 @@ export const Header = () => {
       <Nav >
         <Navigation category={category} isLogin={state.isLogin}/>
       </Nav>
-    </HeaderWrapper >
+    </HeaderWrapper>
     
   )
 }
