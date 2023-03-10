@@ -2,6 +2,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import { Header } from './layouts/header';
 import { StoreProvider } from './store';
 import { Login } from './pages/user';
+import { Main } from './pages/Main';
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
         <Route path='*' element={<Header />} />
       </Routes>
       <Routes>
-        {/* <Route path='/' element={<Main />} /> */}
+        <Route path='/' element={<Main />} />
         <Route path='login' element={<Login />} />
         {/* <Route path='logout' element={<Logout />} /> */}
         {/* <Route path='profile' element={<Logout />} /> */}
